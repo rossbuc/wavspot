@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   const [leftNavbarShown, setLeftNavbarShown] = useState(false);
+  const [rightNavbarShown, setRightNavbarShown] = useState(false);
 
   return (
     <>
@@ -17,9 +18,12 @@ function App() {
               src="src/assets/icons8-wave-64.png"
               className="logo-image"
             ></img>
-            <h1>WavSpot</h1>
+            <h1>wavspot</h1>
           </div>
-          <div className="user-info">
+          <div
+            className="user-info"
+            onClick={() => setRightNavbarShown(!rightNavbarShown)}
+          >
             <img
               src="src/assets/icons8-user-30.png"
               className="user-cover-picture"
@@ -35,6 +39,19 @@ function App() {
                 <li>Feed</li>
                 <li>Trending</li>
                 <li>DailyDigs</li>
+              </ul>
+            </div>
+          ) : (
+            <div></div>
+          )}
+          <div className="content-display"></div>
+          {rightNavbarShown ? (
+            <div className="navbar--user">
+              <ul>
+                <li>Collection</li>
+                <li>Uploads</li>
+                <li>Messages</li>
+                <li>WavTokens</li>
               </ul>
             </div>
           ) : (
