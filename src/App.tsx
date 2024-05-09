@@ -1,10 +1,15 @@
 import { useState } from "react";
+import Home from "./components/home";
 
 import "./App.css";
+import Feed from "./components/feed";
+import Trending from "./components/trending";
+import DailyDigs from "./components/dailyDigs";
 
 function App() {
-  const [leftNavbarShown, setLeftNavbarShown] = useState(false);
-  const [rightNavbarShown, setRightNavbarShown] = useState(false);
+  const [leftNavbarShown, setLeftNavbarShown] = useState<boolean>(false);
+  const [rightNavbarShown, setRightNavbarShown] = useState<boolean>(false);
+  const [selectedNav, setSelectedNav] = useState<JSX.Element | null>(null);
 
   return (
     <>
@@ -35,16 +40,16 @@ function App() {
           {leftNavbarShown ? (
             <div className="navbar--main">
               <ul>
-                <li>Home</li>
-                <li>Feed</li>
-                <li>Trending</li>
-                <li>DailyDigs</li>
+                <li onClick={() => setSelectedNav(Home)}>Home</li>
+                <li onClick={() => setSelectedNav(Feed)}>Feed</li>
+                <li onClick={() => setSelectedNav(Trending)}>Trending</li>
+                <li onClick={() => setSelectedNav(DailyDigs)}>DailyDigs</li>
               </ul>
             </div>
           ) : (
             <div></div>
           )}
-          <div className="content-display"></div>
+          {selectedNav}
           {rightNavbarShown ? (
             <div className="navbar--user">
               <ul>
