@@ -16,12 +16,13 @@
   font-weight: bold;
   font-style: normal;
   display: flex;
-  gap: 1.5vw;
+  gap: 1vw;
   align-items: center;
+  padding-left: 1.5vw;
 }
 
 .logo-image {
-  height: 10vh;
+  height: 8vh;
   width: auto;
 }
 
@@ -29,7 +30,7 @@
   align-items: center;
   position: fixed;
   background-color: rgb(0, 30, 60);
-  color: white;
+  color: aliceblue;
   width: 100vw;
   height: 12vh;
   justify-content: space-between;
@@ -82,13 +83,22 @@ main {
   height: 100%;
   width: 15vw;
   color: rgb(0, 30, 60);
-  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.navbar--user ul {
+  text-align: end;
+  list-style: none;
+}
+
+.navbar--user ul li {
+  padding-top: 3.5vh;
 }
 
 .content-display {
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: aliceblue;
 }
 /* .figtree-header {
   font-family: "Figtree", sans-serif;
