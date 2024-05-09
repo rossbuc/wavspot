@@ -28,7 +28,7 @@
 .header {
   align-items: center;
   position: fixed;
-  background-color: rgb(0, 0, 39);
+  background-color: rgb(0, 30, 60);
   color: white;
   width: 100vw;
   height: 12vh;
@@ -57,6 +57,23 @@ main {
   width: 100vw;
   height: 88vh;
   margin-top: 12vh;
+}
+
+.navbar--main {
+  background-color: rgba(0, 30, 60, 0.085);
+  height: 100%;
+  width: 15vw;
+  color: rgb(0, 30, 60);
+  padding-top: 2vh;
+  padding-left: 2vw;
+}
+
+.navbar--main ul {
+  list-style: none;
+}
+
+.navbar--main ul li {
+  padding-top: 3.5vh;
 }
 /* .figtree-header {
   font-family: "Figtree", sans-serif;

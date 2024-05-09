@@ -22,7 +22,16 @@ function App() {
             <h3>username</h3>
           </div>
         </header>
-        <main></main>
+        <main>
+          <div className="navbar--main">
+            <ul>
+              <li>Home</li>
+              <li>Feed</li>
+              <li>Trending</li>
+              <li>DailyDigs</li>
+            </ul>
+          </div>
+        </main>
       </div>
     </>
   );
